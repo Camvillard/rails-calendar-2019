@@ -6,3 +6,8 @@
 @import "bootstrap-sprockets";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+// import all app files
+@import "components/index";
+@import "layouts/index";
+
