@@ -1,0 +1,2 @@
+class ProductOrderrail < ApplicationRecord
+end
