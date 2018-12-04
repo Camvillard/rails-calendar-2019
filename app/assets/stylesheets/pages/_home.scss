@@ -23,8 +23,15 @@
   }
 
   #product-details {
+    // position: sticky;
+    // top: 4vh;
     flex: 0 0 38vw;
     padding-right: 4vw;
+  }
+
+  p.product-description {
+    position: sticky;
+    top: 2vh;
   }
 
 } // end of lg-screen - 1200px
