@@ -8,7 +8,7 @@ Shipping.delete_all
 
 puts "populating database"
 
-calendar = Product.new(
+calendar = Product.create(
   name: 'maxi calendrier',
   description: "calendrier géant 2019
 janvier à décembre, avec un petit coin pour glisser toutes les notes du mois + un aperçu du mois suivant.
@@ -20,14 +20,14 @@ price: 50.0,
 )
 
 
-montreal = Shipping.new(
+montreal = Shipping.create(
   name: "montreal",
   description: "shipping à montréal",
   price: 15.0
 )
 
 
-pickup = Shipping.new(
+pickup = Shipping.create(
   name: "pickup",
   description: "pickup en boutique",
   price: 0.0

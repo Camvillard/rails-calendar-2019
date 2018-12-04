@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="home-wrapper">
+
+  <div id="cover-image">
+    <%= image_tag 'plr_cover-image.png' %>
+  </div>
+
+  <div id="product-details">
+
+    <h1>deux mille dix neuf</h1>
+    <h4><%= @calendar.name %></h4>
+
+    <p class="product-description">
+      <%= @calendar.description %>
+    </p>
+
+    <%= link_to 'pré-commander', '#', class: 'principal-button' %>
+
+  </div>
+
+
+</div>
+

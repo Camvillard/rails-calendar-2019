@@ -1,0 +1,33 @@
+/* ------ PAGES : HOME ------ */
+
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  #home-wrapper {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  #cover-image {
+    flex: 0 1 60vw;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  #product-details {
+    flex: 0 0 38vw;
+    padding-right: 4vw;
+  }
+
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
