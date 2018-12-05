@@ -17,6 +17,7 @@
 
     <%= form_tag orders_path do %>
       <%= hidden_field_tag 'calendar_id', @calendar.id %>
+      <%= text_field_tag :user_email, nil, placeholder: "email" %>
       <%= submit_tag 'pré commander', class: 'principal-button' %>
     <% end %>
 
@@ -24,4 +25,6 @@
 
 
 </div>
+
+
 
