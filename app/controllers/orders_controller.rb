@@ -31,8 +31,9 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    # raise
     @order.update(set_order_params)
+    @order.shipping = Shipping.find_by(name: params[:order][:shipping])
+
     if @order.save
       redirect_to confirmation_path(@order)
     else
@@ -48,6 +49,10 @@ class OrdersController < ApplicationController
   def confirmation
     @order = Order.find(params[:order_id])
     @total_amount = @order.amount + @order.shipping.price
+  end
+
+  def thanks
+
   end
 
   private

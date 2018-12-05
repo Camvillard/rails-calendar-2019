@@ -1,34 +1,57 @@
-<h1>hello from confirmation page</h1>
+<div class="details-content">
 
-<p>here are all your details</p>
+  <div class="content-text">
 
-<ul>
-  <li><%= @order.product_name %></li>
-  <li> <%= @order.first_name %> </li>
-  <li> <%= @order.last_name %> </li>
-  <li> <%= @order.address %> </li>
-  <li> <%= @order.zipcode %> </li>
-  <li> <%= @order.city %> </li>
-  <li> <%= @order.country %> </li>
-  <li> <%= @order.shipping.price %> </li>
-  <li>total : <%= humanized_money_with_symbol(@total_amount) %></li>
-</ul>
+    <div class="header">
+      <h1>confirmation de la commande</h1>
+      <h5><%= @order.product_name %></h5>
+
+      <p class="disclaimer">attention : il s'agit d'une pré-commande. les envois & remises en main propore se feront à partir du 22 décembre uniquement.</p>
+    </div>
+
+    <div class="content-details">
+
+      <h6>livré à :</h6>
+      <p>
+        <%= @order.first_name + ' ' + @order.last_name %> <br>
+        <%= @order.address %> <br>
+        <%= @order.zipcode %> <br>
+        <%= @order.city %> <br>
+      </p>
+
+    </div> <!-- end of details -->
+
+    <div class="content-details">
+      <h6>livraison :</h6>
+      <p>
+        <%= @order.shipping.name %>
+        <%= humanized_money_with_symbol(@order.shipping.price) %>
+      </p>
+    </div>
+
+    <div class="content-details">
+      <h5>montant total : <span class="total-amount"><%= humanized_money_with_symbol(@order.amount + @order.shipping.price) %></span> </h5>
+    </div>
+
+    <!-- stripe form for payment -->
+    <%= form_tag order_payments_path(@order) do %>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-name="calendar"
+        data-email="<%= @order.user_email %>"
+        data-description="<%= @order.product_name%>"
+        data-amount="<%= @order.amount_cents + @order.shipping.price_cents %>"
+        data-currency="<%= @order.amount.currency %>">
+      </script>
+    <% end %>
+
+  </div> <!-- end of content-text -->
+
+  <div class="content-image">
+    <%= image_tag 'plr_portrait-image.png' %>
+  </div> <!-- end of content-image -->
+
+</div> <!-- end of details-content -->
 
 
-<%= form_tag order_payments_path(@order) do %>
-  <article>
-    <label class="amount">
-      <span>total amount : <%= humanized_money_with_symbol(@order.amount + @order.shipping.price) %></span>
-    </label>
-  </article>
-
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="calendar"
-    data-email="<%= @order.user_email %>"
-    data-description="<%= @order.product_name%>"
-    data-amount="<%= @order.amount_cents + @order.shipping.price_cents %>"
-    data-currency="<%= @order.amount.currency %>"></script>
-
-<% end %>

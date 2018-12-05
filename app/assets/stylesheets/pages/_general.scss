@@ -58,7 +58,7 @@ h6 {
 }
 
 
-p {
+p, a, li {
   margin: 1.5rem auto 1.2rem;
   font-size: 1.4rem;
 }
@@ -106,12 +106,12 @@ a {
   }
 
   h6 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin: 1.2rem auto 2rem;
   }
 
 
-  p {
+  p, a, li {
     font-size: 1.6rem;
   }
 } // end of lg-screen - 1200px
