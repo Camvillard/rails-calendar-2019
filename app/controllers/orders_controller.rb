@@ -1,4 +1,9 @@
 class OrdersController < ApplicationController
+
+  def show
+    @order = Order.find(params[:id])
+  end
+
   def create
   calendar = Product.find(params[:calendar_id])
   order  = Order.create!(
