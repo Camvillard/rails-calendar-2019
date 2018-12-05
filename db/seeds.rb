@@ -19,11 +19,23 @@ douze feuilles reliées.",
 price_cents: 5000,
 )
 
-
-montreal = Shipping.create(
-  name: "montreal",
-  description: "shipping à montréal",
+standard = Shipping.create(
+  name: "standard - canada",
+  description: "shipping standard au canada",
   price_cents: 1500
+)
+
+priority = Shipping.create(
+  name: "prioritaire - canada",
+  description: "shipping prioritaire au canada",
+  price_cents: 2500
+)
+
+
+international = Shipping.create(
+  name: "international",
+  description: "shipping international",
+  price_cents: 4500
 )
 
 

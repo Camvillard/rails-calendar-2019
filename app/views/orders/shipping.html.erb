@@ -1,0 +1,16 @@
+<h1>informations de livraison</h1>
+
+<p><%= @order.product_name %></p>
+
+
+<%= simple_form_for @order do |f| %>
+  <%= f.input :first_name, placeholder: 'prénom', label: false %>
+  <%= f.input :last_name, placeholder: 'nom de famille', label: false %>
+  <%= f.input :address, placeholder: 'addresse', label: false %>
+  <%= f.input :zipcode, placeholder: 'code postal', label: false %>
+  <%= f.input :zipcode, placeholder: 'ville', label: false %>
+  <%= f.input :zipcode, placeholder: 'pays', label: false %>
+  <%= f.collection_radio_buttons :shipping, Shipping.all, :name, :description %>
+  <%= f.button :submit %>
+<% end %>
+

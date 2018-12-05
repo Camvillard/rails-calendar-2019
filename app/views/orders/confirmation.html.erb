@@ -1,0 +1,34 @@
+<h1>hello from confirmation page</h1>
+
+<p>here are all your details</p>
+
+<ul>
+  <li><%= @order.product_name %></li>
+  <li> <%= @order.first_name %> </li>
+  <li> <%= @order.last_name %> </li>
+  <li> <%= @order.address %> </li>
+  <li> <%= @order.zipcode %> </li>
+  <li> <%= @order.city %> </li>
+  <li> <%= @order.country %> </li>
+  <li> <%= @order.shipping.price %> </li>
+  <li>total : <%= humanized_money_with_symbol(@total_amount) %></li>
+</ul>
+
+
+<%= form_tag order_payments_path(@order) do %>
+  <article>
+    <label class="amount">
+      <span>total amount : <%= humanized_money_with_symbol(@order.amount + @order.shipping.price) %></span>
+    </label>
+  </article>
+
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="calendar"
+    data-email="<%= @order.user_email %>"
+    data-description="<%= @order.product_name%>"
+    data-amount="<%= @order.amount_cents + @order.shipping.price_cents %>"
+    data-currency="<%= @order.amount.currency %>"></script>
+
+<% end %>

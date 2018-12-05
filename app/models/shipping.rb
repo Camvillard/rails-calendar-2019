@@ -1,5 +1,5 @@
 class Shipping < ApplicationRecord
-  has_many :product_orders
+  has_many :orders
 
   monetize :price_cents
 end
