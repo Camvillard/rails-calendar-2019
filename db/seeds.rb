@@ -1,8 +1,8 @@
 puts "cleaning the database"
 
 
-ProductOrder.delete_all
 ProductImage.delete_all
+Order.delete_all
 Product.delete_all
 Shipping.delete_all
 
