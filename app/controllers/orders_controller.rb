@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
   end
 
   def create
+    binding.pry
     calendar = Product.find(params[:calendar_id])
     order = Order.new(
       product_name: calendar.name,
@@ -12,16 +13,15 @@ class OrdersController < ApplicationController
       state: "pending",
       user_email: params[:user_email]
     )
-    order.shipping = Shipping.find_by(price_cents: 1500)
+    order.shipping = Shipping.first
     if order.save
       redirect_to edit_order_path(order)
     elsif order.errors.messages[:user_email].first == "can't be blank"
       flash[:alert] = "email #{order.errors.messages[:user_email].first}"
       redirect_to root_path
     else
-      raise
-        # flash[:alert] = "something went wrong. please try again or send me an email!"
-        # redirect_to root_path
+      flash[:alert] = "something went wrong"
+      redirect_to root_path
     end
   end
 

@@ -9,13 +9,12 @@
     <h1>deux mille dix neuf</h1>
     <h4><%= @calendar.name %></h4>
 
-    <p class="product-description">
+    <div class="product-description">
       <p><%= @calendar.description %></p>
-
       <p><%= humanized_money_with_symbol(@calendar.price) %></p>
-    </p>
+    </div>
 
-    <%= form_tag orders_path, id: "home-precommande" do %>
+    <%= form_tag orders_path do %>
       <%= hidden_field_tag 'calendar_id', @calendar.id %>
       <%= text_field_tag :user_email, nil, placeholder: "email" %>
       <%= submit_tag 'pré commander', class: 'principal-button' %>

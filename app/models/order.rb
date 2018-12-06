@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
   belongs_to :shipping
-  belongs_to :product
+  # belongs_to :product
 
   monetize :amount_cents
 
