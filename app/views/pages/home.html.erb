@@ -17,9 +17,14 @@
     <%= form_tag orders_path do %>
       <%= hidden_field_tag 'calendar_id', @calendar.id %>
       <%= text_field_tag :user_email, nil, placeholder: "email" %>
-      <%= submit_tag 'pré commander', class: 'brand-primary-button' %>
+      <button class="button">pré commander</button>
+      <%#= submit_tag 'pré commander', class: 'button' %>
     <% end %>
 
+
+  </div> <!-- end of #product-details -->
+
+  <div id="portrait-carrousel">
 
   </div>
 

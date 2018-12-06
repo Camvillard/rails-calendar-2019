@@ -5,12 +5,40 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
   background-color: $color;
   z-index: -10;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: 0 0;
   transition: transform 0.5s ease;
 }
+
+@mixin button-inverted-before($color) {
+  @include button-before($color);
+  transform: scaleX(0);
+}
+
+
+@mixin brand-button {
+  background: $aqua;
+  font-weight: $font-weight-bold;
+  color: white;
+  font-size: 2rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+@mixin accent-button {
+  background: white;
+  font-weight: $font-weight-bold;
+  border: 4px solid $aqua;
+  color: $aqua;
+  font-size: 2rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
