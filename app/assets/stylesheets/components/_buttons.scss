@@ -1,10 +1,56 @@
 /* ------ COMPONENTS : BUTTONS ------ */
 
+/**
+ *  -----------------------------------------------
+ *  1. principal buttons
+ *  2. form submit buttons
+ *  -----------------------------------------------
+ */
+
+
+// 1. principal buttons
+
+.button-effect {
+  background-color: transparent;
+  border: 1px solid $aqua;
+  border-radius: 0;
+  color: $aqua;
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 5px 15px 8px;
+  position: relative;
+  transition: color 0.5s ease;
+  text-align: center;
+
+  & * {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &::before {
+    @include button-before($aqua);
+  }
+
+  &:hover {
+    color: white;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+
+// 2. form submit buttons
+
 input[type="submit"] {
   border: none;
 }
-.principal-button {
-  @include principal-button($aqua);
+
+.brand-primary-button {
+  @include brand-primary-button($aqua);
 }
 
 

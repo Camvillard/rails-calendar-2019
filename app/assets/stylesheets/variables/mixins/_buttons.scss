@@ -1,6 +1,6 @@
 /* ------ MIXINS : BUTTONS ------ */
 
-@mixin principal-button($color) {
+@mixin brand-primary-button($color) {
   background: $color;
   font-weight: $font-weight-bold;
   color: white;

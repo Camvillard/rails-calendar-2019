@@ -5,7 +5,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    # binding.pry
     calendar = Product.find(params[:calendar_id])
     order = Order.new(
       product_name: calendar.name,

@@ -1,0 +1,16 @@
+/* ------ MIXINS : BUTTONS ------ */
+
+
+@mixin button-before($color) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $color;
+  z-index: -10;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: transform 0.5s ease;
+}
