@@ -1,16 +1,31 @@
-<h1>informations de livraison</h1>
+<div class="details-content">
 
-<p><%= @order.product_name %></p>
+  <div class="content-text">
 
+    <div class="header">
+      <h1>informations de livraison</h1>
+      <h5><%= @order.product_name %></p>
+    </div> <!-- end of header -->
 
-<%= simple_form_for @order do |f| %>
-  <%= f.input :first_name, placeholder: 'prénom', label: false %>
-  <%= f.input :last_name, placeholder: 'nom de famille', label: false %>
-  <%= f.input :address, placeholder: 'addresse', label: false %>
-  <%= f.input :zipcode, placeholder: 'code postal', label: false %>
-  <%= f.input :city, placeholder: 'ville', label: false %>
-  <%#= f.input :country, placeholder: 'pays', label: false %>
-  <%= f.collection_radio_buttons :shipping, Shipping.all, :name, :description %>
-  <%= f.button :submit %>
-<% end %>
+    <div class="content-details">
+      <%= simple_form_for @order do |f| %>
+        <%= f.input :first_name, placeholder: 'prénom', label: false %>
+        <%= f.input :last_name, placeholder: 'nom de famille', label: false %>
+        <%= f.input :address, placeholder: 'addresse', label: false %>
+        <%= f.input :zipcode, placeholder: 'code postal', label: false %>
+        <%= f.input :city, class: 'small-input', placeholder: 'ville', label: false %>
+        <%#= f.input :country, placeholder: 'pays', label: false %>
+        <%= f.collection_radio_buttons :shipping, Shipping.all, :name, :description %>
+        <%= f.button :submit, class: 'principal-button', value: 'confirmer la commande' %>
+      <% end %>
+
+    </div> <!-- end of content details -->
+
+  </div> <!-- end of content-text -->
+
+  <div class="content-image">
+    <%= image_tag 'plr_portrait-image.png' %>
+  </div> <!-- end of content-image -->
+
+</div> <!-- end of details-content -->
 

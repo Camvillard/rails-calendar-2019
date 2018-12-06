@@ -33,11 +33,10 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @order.update(set_order_params)
     @order.shipping = Shipping.find_by(name: params[:order][:shipping])
-
     if @order.save
       redirect_to confirmation_path(@order)
     else
-      raise
+      render :edit
     end
   end
 

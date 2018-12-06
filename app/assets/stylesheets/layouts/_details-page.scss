@@ -9,10 +9,14 @@
 
 .content-text {
   padding-left: 4vw;
+  flex: 0 1 60vw;
 }
 
 .content-image {
   align-self: center;
+  img {
+    max-width: 100%;
+  }
 }
 
 

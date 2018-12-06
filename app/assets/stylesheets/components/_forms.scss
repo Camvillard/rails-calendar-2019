@@ -1,0 +1,50 @@
+/* ------ COMPONENTS : FORMS ------ */
+
+
+form {
+  input {
+    margin: 1rem auto;
+  }
+  input[type="text"] {
+    width: 100%;
+    display: block;
+    border: none;
+    background: $light-gray;
+    color: black;
+  }
+
+  input[type="text"]:hover,
+  input[type="text"]:focus,
+  input[type="text"]:visited,
+  input[type="text"]:active {
+    outline: none;
+    outline-offset: 0px;
+    background: $aqua;
+    color: black;
+  }
+
+  ::placeholder {
+    color: white;
+    font-family: $body-font;
+  }
+
+}
+
+//radio buttons
+
+input[type="radio"],
+label.collection_radio_buttons {
+  font-size: 2rem;
+}
+
+form.simple_form span {
+  display: block;
+}
+
+// form for shipping
+
+input#order_zipcode,
+input#order_city {
+  width: 48%;
+  display: inline-block;
+}

@@ -1,6 +1,43 @@
 /* ------ PAGES : HOME ------ */
 
 
+// styling the form
+#pages-home form {
+  input {
+    display: block;
+    width: 100%;
+  }
+
+  input[type="text"] {
+    border: 0px;
+    font-size: 1.6rem;
+    height: 4.6rem;
+    text-align: center;
+    color: $aqua;
+    font-family: $body-font;
+    font-weight: $font-weight-bold;
+  }
+
+  input[type="text"]:visited,
+  input[type="text"]:hover,
+  input[type="text"]:active,
+  input[type="text"]:focus {
+    transition: all 0.3s ease;
+    outline: none;
+    outline-offset: 0px;
+    background: $light-gray;
+    font-weight: $font-weight-bold;
+  }
+
+  ::placeholder {
+    font-family: $body-font;
+    font-weight: $font-weight-light;
+    color: $aqua;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
 
@@ -32,6 +69,17 @@
   p.product-description {
     position: sticky;
     top: 2vh;
+  }
+
+
+  // styling form
+  input[type="text"] {
+    font-size: 2rem;
+    height: 4.6rem;
+  }
+
+  ::placeholder {
+    font-size: 2rem;
   }
 
 } // end of lg-screen - 1200px
