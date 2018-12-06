@@ -1,30 +1,41 @@
 <div id="home-wrapper">
 
-  <div id="cover-image">
-    <%= image_tag 'plr_cover-image.png' %>
+  <div id="product-images">
+    <%= image_tag 'plr_cover-image.png', id: 'main-image' %>
+    <%= image_tag 'plr_portrait-image.png', id: 'portrait-image' %>
   </div>
 
   <div id="product-details">
 
-    <h1>deux mille dix neuf</h1>
-    <h4><%= @calendar.name %></h4>
+    <div id="content-details">
+      <h1>deux mille dix neuf</h1>
+      <h4><%= @calendar.name %></h4>
 
-    <div class="product-description">
-      <p><%= @calendar.description %></p>
-      <p><%= humanized_money_with_symbol(@calendar.price) %></p>
+      <div class="product-description">
+        <p><%= @calendar.description %></p>
+        <p><%= humanized_money_with_symbol(@calendar.price) %></p>
+      </div>
+
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'calendar_id', @calendar.id %>
+        <%= text_field_tag :user_email, nil, placeholder: "email" %>
+        <button class="button">pré commander</button>
+        <%#= submit_tag 'pré commander', class: 'button' %>
+      <% end %>
+
     </div>
 
-    <%= form_tag orders_path do %>
-      <%= hidden_field_tag 'calendar_id', @calendar.id %>
-      <%= text_field_tag :user_email, nil, placeholder: "email" %>
-      <%= submit_tag 'pré commander', class: 'brand-primary-button' %>
-    <% end %>
-
-
-  </div>
-
+  </div> <!-- end of #product-details -->
 
 </div>
+
+<div id="home-footer">
+  <%= image_tag 'plr_paysage-image.png', id: 'paysage-image' %>
+  <p>cdlt, bisou.</p>
+</div>
+
+
+
 
 
 

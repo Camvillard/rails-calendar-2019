@@ -50,28 +50,35 @@
     margin-top: 12vh;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 220px;
   }
 
-  #cover-image {
+  #product-images {
     flex: 0 1 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     img {
       max-width: 100%;
+      margin-bottom: 80px;
     }
   }
 
+  img#portrait-image {
+    width: 50%;
+    border: 3px solid red;
+    align-self: center;
+  }
+
   #product-details {
-    // position: sticky;
-    // top: 4vh;
     flex: 0 0 38vw;
     padding-right: 4vw;
-  }
 
-  p.product-description {
-    position: sticky;
-    top: 2vh;
+    #content-details {
+      position: sticky;
+      top: 4vh;
+    }
   }
-
 
   // styling form
   input[type="text"] {
@@ -81,6 +88,17 @@
 
   ::placeholder {
     font-size: 2rem;
+  }
+
+  // footer
+
+  #home-footer {
+    background: $aqua;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
 } // end of lg-screen - 1200px

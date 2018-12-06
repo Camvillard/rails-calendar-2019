@@ -1,15 +1,2 @@
 /* ------ MIXINS : BUTTONS ------ */
 
-@mixin brand-primary-button($color) {
-  background: $color;
-  font-weight: $font-weight-bold;
-  color: white;
-  font-size: 2rem;
-  margin: 2rem auto;
-  padding: 1rem 2rem 1.2rem;
-  transition: all 0.3s ease;
-  &:hover {
-    color: $color;
-    background: white;
-  }
-}

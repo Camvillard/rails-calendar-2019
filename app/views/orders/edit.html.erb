@@ -16,7 +16,7 @@
         <%= f.input :city, class: 'small-input', placeholder: 'ville', label: false %>
         <%#= f.input :country, placeholder: 'pays', label: false %>
         <%= f.collection_radio_buttons :shipping, Shipping.all, :name, :description %>
-        <%= f.button :submit, class: 'brand-primary-button', value: 'confirmer la commande' %>
+        <%= f.button :submit, class: 'brand-button', value: 'confirmer la commande' %>
       <% end %>
 
     </div> <!-- end of content details -->
