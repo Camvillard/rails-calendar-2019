@@ -33,7 +33,7 @@ priority = Shipping.create(
 
 
 international = Shipping.create(
-  name: "international",
+  name: "standard - international",
   description: "shipping international",
   price_cents: 4500
 )
@@ -41,7 +41,7 @@ international = Shipping.create(
 
 pickup = Shipping.create(
   name: "pickup",
-  description: "pickup en boutique",
+  description: "ramassage en boutique",
   price: 0.0
 )
 
