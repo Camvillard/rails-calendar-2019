@@ -1,7 +1,10 @@
 /* ------ COMPONENTS : NAVBAR ------ */
 
-#navbar-container {
+.navbar-container {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   width: 100vw;
+  padding-right: 4vw;
 }
+

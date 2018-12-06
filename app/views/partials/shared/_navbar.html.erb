@@ -1,9 +1,15 @@
-<% unless action_name == "home" %>
-  <div id="navbar-container">
-    <%= link_to root_path do %>
-      <h1>deux mille dix neuf</h1>
+<% if action_name == "home" %>
+  <div id="home-navbar" class="navbar-container">
       <h2>cdlt/bisou.</h2>
-    <% end %>
+  </div>
+<% else %>
+  <div id="pages-navbar" class="navbar-container">
+    <div id="home-link">
+      <%= link_to root_path do %>
+        <h1 class="button-effect">deux mille dix neuf</h1>
+      <% end %>
+      <h2>cdlt,bisou.</h2>
+    </div>
   </div>
 <% end %>
 
