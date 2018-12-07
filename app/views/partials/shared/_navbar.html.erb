@@ -1,8 +1,5 @@
-<% if action_name == "home" %>
-  <div id="home-navbar" class="navbar-container">
-    <h2>cdlt/bisou.</h2>
-  </div>
-<% else %>
+<% unless action_name == "home" || action_name == "thanks"%>
+
   <div id="pages-navbar" class="navbar-container">
     <div id="home-link">
       <%= link_to root_path do %>
@@ -11,5 +8,6 @@
       <h2>par cdlt,bisou.</h2>
     </div>
   </div>
+
 <% end %>
 

@@ -9,18 +9,18 @@
 
     <div id="content-details">
       <h1>deux mille dix neuf</h1>
+      <h3>par cdlt, bisou.</h3>
       <h4><%= @calendar.name %></h4>
 
       <div class="product-description">
-        <p><%= @calendar.description %></p>
+        <p><%= simple_format @calendar.description %></p>
         <p><%= humanized_money_with_symbol(@calendar.price) %></p>
       </div>
 
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'calendar_id', @calendar.id %>
-        <%= text_field_tag :user_email, nil, placeholder: "email" %>
+        <%= text_field_tag :user_email, nil, placeholder: "adresse email" %>
         <button class="button">pré commander</button>
-        <%#= submit_tag 'pré commander', class: 'button' %>
       <% end %>
 
     </div>

@@ -50,7 +50,7 @@ class OrdersController < ApplicationController
   end
 
   def thanks
-
+    # raise
   end
 
   private

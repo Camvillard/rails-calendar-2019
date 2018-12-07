@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 ruby '2.4.4'
 
@@ -17,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'money-rails'
 gem 'stripe'
+gem 'social-share-button'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

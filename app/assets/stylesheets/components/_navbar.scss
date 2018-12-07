@@ -5,7 +5,13 @@
   flex-direction: column;
   align-items: flex-end;
   width: 100vw;
-  padding-right: 4vw;
+  padding-right: 20px;
+}
+
+#brand-home {
+  h2 {
+    text-align: right;
+  }
 }
 
 #home-link {
@@ -27,6 +33,9 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .navbar-container {
+    padding-right: 40px;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

@@ -83,6 +83,23 @@
       transform: scaleX(1);
     }
   }
+
+  &.big-button {
+    border: 8px solid black;
+  }
+
+  // accent color - black
+  &.brand-button {
+    border-color: $aqua;
+    color: $aqua;
+
+    &::before {
+      background-color: $aqua;
+    }
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 

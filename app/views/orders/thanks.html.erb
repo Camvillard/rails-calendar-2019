@@ -1,1 +1,33 @@
-<h1>hello from thanks page</h1>
+<div id="thanks-content">
+
+  <div id="thanks-header">
+    <h1>merci pour votre commande !</h1>
+    <h5>les calendriers seront expédiés à partir du 22 décembre.</h5>
+  </div>
+
+  <div id="thanks-text">
+    <p>bien sûr, puisque nous sommes au 21ème siècle, un courriel vous sera envoyé à ce moment là. d'ici là - toujours puisque nous sommes au 21ème, voici toute une multitude de trucs que vous pouvez faire en attendant.</p>
+    <ul>
+      <li><%= link_to 'télécharger le calendrier en pdf', '#' %></li>
+      <li><%= link_to "offrir un calendrier à un ami", '#' %></li>
+      <li><a data-module="SocialShareButton"
+         data-module-net="linkedin">partager sur twitter</a></li>
+      <li><a data-sharer="facebook"
+             data-module-net="hashtag"
+             data-url="<%= url_for %>">partager sur facebook</a></li>
+
+    </ul>
+
+  </div>
+
+  <div id="thanks-footer">
+
+    <%= link_to root_path do %>
+      <h2 class="button-inverted brand-button">deux mille dix neuf</h2>
+    <% end %>
+    <h3>par cdlt, bisou.</h3>
+
+  </div>
+
+</div>
+
