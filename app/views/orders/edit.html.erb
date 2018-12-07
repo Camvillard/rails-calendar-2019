@@ -14,9 +14,10 @@
         <%= f.input :address, placeholder: 'addresse', label: false %>
         <%= f.input :zipcode, placeholder: 'code postal', label: false %>
         <%= f.input :city, class: 'small-input', placeholder: 'ville', label: false %>
-        <%#= f.input :country, placeholder: 'pays', label: false %>
         <%= f.collection_radio_buttons :shipping, Shipping.all, :name, :description %>
-        <%= f.button :submit, class: 'brand-button', value: 'confirmer la commande' %>
+        <button class="button">pré commander</button>
+
+        <%#= f.button :submit, class: 'button', value: 'confirmer la commande' %>
       <% end %>
 
     </div> <!-- end of content details -->

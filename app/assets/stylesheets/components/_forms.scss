@@ -2,15 +2,18 @@
 
 
 form {
+
   input {
     margin: 1rem auto;
   }
+
   input[type="text"] {
     width: 100%;
     display: block;
     border: none;
     background: $light-gray;
     color: black;
+    padding-left: 10px;
   }
 
   input[type="text"]:hover,
@@ -21,19 +24,26 @@ form {
     outline-offset: 0px;
     background: $aqua;
     color: black;
+    padding-left: 10px;
   }
 
   ::placeholder {
     color: white;
     font-family: $body-font;
+    padding-left: 10px;
   }
 
 }
 
 //radio buttons
 
-input[type="radio"],
+input[type="radio"]{
+  border: 2px solid $aqua;
+  font-size: 2rem;
+}
+
 label.collection_radio_buttons {
+  margin-left: 10px;
   font-size: 2rem;
 }
 
@@ -41,10 +51,17 @@ form.simple_form span {
   display: block;
 }
 
-// form for shipping
+// form for shipping only
 
-input#order_zipcode,
-input#order_city {
+.order_zipcode,
+.order_city {
   width: 48%;
-  display: inline-block;
+  display: inline-block !important;
+}
+.order_city {
+  float: right
+}
+
+form.edit_order button {
+  width: 65%;
 }

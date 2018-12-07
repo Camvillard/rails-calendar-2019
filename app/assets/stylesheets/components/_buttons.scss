@@ -12,9 +12,8 @@
 
 // color-block button
 
-
 .button {
-  border: none;
+  border: 3px solid $aqua;
   background-color: transparent;
   display: inline-block;
   font-weight: $font-weight-bold;
@@ -37,6 +36,7 @@
   // brand color
   &:hover {
     color: $aqua;
+    border: 3px solid $aqua;
 
     &::before {
       transform: scaleX(0);
