@@ -1,0 +1,27 @@
+
+<% if action_name == "home" %>
+
+  <div id="home-footer">
+    <%= image_tag 'plr_paysage-image.png', id: 'paysage-image' %>
+    <p>cdlt, bisou.</p>
+  </div>
+
+<% else %>
+
+<div id="main-footer">
+  <div class="content">
+    <p>
+      cdlt, bisou. <br>
+      tous droits réservés.
+    </p>
+    <%= link_to 'contact', '#', class: 'accent-text' %>
+    <%= link_to 'CGV', '#', class: 'accent-text' %>
+    <%= link_to 'mentions légales', '#', class: 'accent-text' %>
+  </div>
+</div>
+
+
+<% end %>
+
+
+

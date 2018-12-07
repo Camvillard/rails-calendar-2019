@@ -71,6 +71,15 @@ a {
   }
 }
 
+.content {
+  padding: 20px;
+}
+
+.accent-text {
+  font-family: $accent-font;
+  font-size: 1.2rem;
+}
+
 
 @media (min-width: $sm-screen) {
 } // end of sm-screen - 768px
@@ -110,9 +119,20 @@ a {
     margin: 1.2rem auto 2rem;
   }
 
-
   p, a, li {
     font-size: 1.6rem;
+  }
+
+  a {
+    color: $aqua;
+  }
+
+  .content {
+    padding: 40px;
+  }
+
+  .accent-text {
+    font-size: 1.4rem;
   }
 } // end of lg-screen - 1200px
 
