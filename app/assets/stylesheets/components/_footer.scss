@@ -12,6 +12,44 @@
   p {
     font-size: 1.4rem;
   }
+
+  #mentions-legales a{
+    color: white;
+  }
+}
+
+#main-share-links {
+  display: inline-block;
+
+  a {
+    color: white;
+    font-weight: $font-weight-bold;
+    border-bottom: 3px solid white;
+    transition: all 0.3s ease;
+    margin: 4px 10px;
+  }
+
+  a:hover {
+    border-bottom: 3px solid black;
+    color: black;
+  }
+
+}
+
+#mail-link {
+    margin: 10px 10px 30px;
+  a {
+    color: white;
+    font-weight: $font-weight-bold;
+    border-bottom: 3px solid white;
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    border-bottom: 3px solid black;
+    color: black;
+  }
+
 }
 
 
@@ -26,7 +64,7 @@
   // footer displayed only on homepage
   #home-footer {
     p {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
   }
 

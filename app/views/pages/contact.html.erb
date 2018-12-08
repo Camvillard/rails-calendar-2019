@@ -1,0 +1,11 @@
+<h1>hello from contact</h1>
+
+
+<%= form_for(contact_path, method: "post") do %>
+  <%= text_field_tag :subject, nil, placeholder: "objet" %>
+  <%= text_field_tag :email_from, nil, placeholder: "adresse email" %>
+  <%= text_field_tag :message_content, nil, placeholder: "petits mots doux." %>
+        <button class="button">envoyer</button>
+
+
+<% end %>

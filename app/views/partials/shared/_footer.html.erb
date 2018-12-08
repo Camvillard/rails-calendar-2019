@@ -1,23 +1,39 @@
 <% if action_name == "home" %>
 
   <div id="home-footer">
+
+    <div id="main-share-links">
+      <a data-sharer="twitter" data-url="<%= root_url %>">partager sur twitter</a>
+      <a data-sharer="facebook" data-url="<%= root_url %>">partager sur facebook</a>
+    </div>
+
+    <div id="mail-link">
+      <a data-sharer="email" data-title="maxi calendrier" data-url="<%= root_url %>" data-subject="hey! si jamais tu cherches une idée de cadeau de noël, voici quelque chose qui me plaira beaucoup beaucoup beaucoup." data-to="some@email.com">transmettre subtilement cette idée cadeau par email</a>
+    </div>
+
     <%= image_tag 'plr_paysage-image.png', id: 'paysage-image' %>
-    <p>cdlt, bisou.</p>
+
+    <p>cdlt, bisou. tous droits réservés.</p>
+
+    <div id="mentions-legales">
+      <%= link_to 'contact', contact_path, class: 'accent-text' %>
+      <%= link_to 'mentions légales', mentions_path, class: 'accent-text' %>
+    </div>
+
   </div>
 
 <% else %>
 
-<div id="main-footer">
-  <div class="content">
-    <p>
-      cdlt, bisou. <br>
-      tous droits réservés.
-    </p>
-    <%= link_to 'contact', '#', class: 'accent-text' %>
-    <%= link_to 'CGV', '#', class: 'accent-text' %>
-    <%= link_to 'mentions légales', '#', class: 'accent-text' %>
+  <div id="main-footer">
+    <div class="content">
+      <p>
+        cdlt, bisou. <br>
+        tous droits réservés.
+      </p>
+      <%= link_to 'contact', contact_path, class: 'accent-text' %>
+      <%= link_to 'mentions légales', mentions_path, class: 'accent-text' %>
+    </div>
   </div>
-</div>
 
 
 <% end %>
