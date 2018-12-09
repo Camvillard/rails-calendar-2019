@@ -19,6 +19,8 @@ gem 'webpacker'
 gem 'money-rails'
 gem 'stripe'
 gem 'social-share-button'
+gem 'postmark-rails'
+gem 'mailgun-ruby'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
