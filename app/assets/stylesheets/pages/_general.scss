@@ -66,6 +66,7 @@ p, a, li {
 a {
   font-family: $headers-font;
   line-height: 1.625;
+  color: $aqua;
   &:hover {
     text-decoration: none;
   }
@@ -121,10 +122,6 @@ a {
 
   p, a, li {
     font-size: 1.6rem;
-  }
-
-  a {
-    color: $aqua;
   }
 
   .content {

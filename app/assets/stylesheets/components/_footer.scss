@@ -10,9 +10,26 @@
   align-items: center;
   color: white;
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
+
+#main-footer {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  p {
+    font-size: 1.2rem;
+    text-align: right;
+    color: $aqua;
+  }
+  #footer-important-stuff {
+    align-self: flex-end;
+    text-align: right;
+  }
+}
+
 
 
 @media (min-width: $sm-screen) {
@@ -30,15 +47,15 @@
     }
   }
 
-  #main-footer {
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    p {
-      text-align: right;
-      color: $aqua;
-    }
-  }
+  // #main-footer {
+  //   width: 100vw;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   p {
+  //     text-align: right;
+  //     color: $aqua;
+  //   }
+  // }
 
 
 
