@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   get '/styles', to: 'pages#styles'
+  get '/contact', to: 'messages#new', as: 'new_message'
+  post '/contact', to: 'messages#create'
   resources :orders, only: [:show, :create, :edit, :update] do
     resources :payments, only: [:new, :create]
   end
