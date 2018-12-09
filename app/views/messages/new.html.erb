@@ -1,0 +1,12 @@
+<h1>hello from new</h1>
+
+
+<%= form_for @message, url: create_message_url do |f| %>
+  <%= notice %>
+  <%= @message.errors.full_messages.join(', ') %>
+
+  <%= f.text_field :name, placeholder: 'name' %>
+  <%= f.text_field :email, placeholder: 'email' %>
+  <%= f.text_field :body, placeholder: 'body' %>
+  <%= f.submit 'envoyer' %>
+<% end %>
