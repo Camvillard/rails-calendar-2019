@@ -50,6 +50,7 @@ class OrdersController < ApplicationController
   end
 
   def thanks
+    @order = Order.find(params[:order_id])
     # raise
   end
 
