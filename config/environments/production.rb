@@ -67,6 +67,12 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+
+  # configuration for postmark emails
+  config.action_mailer.delivery_method     = :postmark
+  config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
+  config.action_mailer.default_url_options = { host: "deuxmilledixneuf.herokuapp.com" }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
@@ -90,6 +96,7 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
