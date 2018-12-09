@@ -23,14 +23,20 @@
   ul {
     list-style: none;
     padding: 0px;
+    text-align: center;
   }
 
   li,
   li a{
     font-weight: $font-weight-bold;
     color: $aqua;
-    display: inline-block;
+    display: block;
     margin: 0.4rem auto;
+  }
+
+  li a.big {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   li:hover,
@@ -38,28 +44,28 @@
     color: black;
   }
 
-  li:after {
-    content: "/";
-    margin: 0px 10px;
-  }
+  // li:after {
+  //   content: "/";
+  //   margin: 0px 4px;
+  // }
 
-  li:last-child:after {
-    content: "";
-  }
+  // li:last-child:after {
+  //   content: "";
+  // }
 }
 
 
 #thanks-footer {
+  margin-top: 20px;
   h2 {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
   }
   h3 {
     margin-top: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: $font-weight-light;
     text-align: right;
-    color: $aqua;
   }
 }
 
@@ -117,6 +123,17 @@
 
     li:last-child:after {
       content: "";
+    }
+  }
+
+  #thanks-footer {
+    h2 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      margin-top: 0.5rem;
+      font-size: 2rem;
     }
   }
 

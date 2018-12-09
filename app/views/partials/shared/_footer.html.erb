@@ -7,17 +7,19 @@
 
 <% else %>
 
-<div id="main-footer">
-  <div class="content">
-    <p>
-      cdlt, bisou. <br>
-      tous droits réservés.
-    </p>
-    <%= link_to 'contact', '#', class: 'accent-text' %>
-    <%= link_to 'CGV', '#', class: 'accent-text' %>
-    <%= link_to 'mentions légales', '#', class: 'accent-text' %>
+  <div id="main-footer" class="content">
+    <div id="footer-credits">
+        <p>
+          cdlt, bisou. <br>
+          tous droits réservés.
+        </p>
+
+      <div id="footer-important-stuff">
+      <%= link_to 'contact', 'mailto:hello@camillevillard.com', class: 'accent-text' %>
+      <%= link_to 'mentions légales', '#', class: 'accent-text' %>
+      </div>
+    </div>
   </div>
-</div>
 
 
 <% end %>
