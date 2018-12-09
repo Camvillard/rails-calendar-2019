@@ -81,6 +81,7 @@
   #thanks-content {
     padding-left: 8vw;
     padding-right: 8vw;
+    min-height: 80vh;
   }
 
   #thanks-header {
@@ -105,12 +106,23 @@
       padding: 0px;
     }
 
-    li {
+    li,
+    li a {
       font-weight: $font-weight-bold;
       color: $aqua;
       display: inline-block;
       margin: 0.4rem auto;
     }
+
+    li a.big {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    li:first-child {
+      display: block;
+    }
+
     li:hover,
     li:hover a {
       color: black;

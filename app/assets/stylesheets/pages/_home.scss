@@ -1,5 +1,14 @@
 /* ------ PAGES : HOME ------ */
 
+#product-images {
+  // width: 100vw;
+  // display: flex;
+  img {
+    width: 70%;
+    margin-bottom: 80px;
+    margin: auto;
+  }
+}
 
 // styling the form
 #pages-home form {
