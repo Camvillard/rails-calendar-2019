@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>deux mille dix neuf</title>
+    <meta name="description" content="maxi calendrier un peu géant à accrocher chez soi pour ne rater absolument aucun évenement.">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="deux mille dix neuf - maxi calendrier pour l'année 2019." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="deuxmilledixneuf-fb-cover.jpg" />
+    <meta property="og:description" content="maxi calendrier un peu géant à accrocher chez soi pour ne rater absolument aucun évenement." />
+    <meta property="og:site_name" content="deux mille dix neuf - maxi calendrier pour l'année 2019." />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@camvillard">
+    <meta name="twitter:title" content="deux mille dix neuf - maxi calendrier pour l'année 2019.">
+    <meta name="twitter:description" content="maxi calendrier un peu géant à accrocher chez soi pour ne rater absolument aucun évenement.">
+    <meta name="twitter:creator" content="@camvillard">
+    <meta name="twitter:image:src" content="deuxmilledixneuf-fb-cover.jpg">
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= favicon_link_tag asset_path('favicon.png') %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <title><%= meta_title %></title>
-    <meta name="description" content="<%= meta_description %>">
-
-    <!-- Facebook Open Graph data -->
-    <meta property="og:title" content="<%= meta_title %>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= request.original_url %>" />
-    <meta property="og:image" content="<%= meta_image %>" />
-    <meta property="og:description" content="<%= meta_description %>" />
-    <meta property="og:site_name" content="<%= meta_title %>" />
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:title" content="<%= meta_title %>">
-    <meta name="twitter:description" content="<%= meta_description %>">
-    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:image:src" content="<%= meta_image %>">
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
 
