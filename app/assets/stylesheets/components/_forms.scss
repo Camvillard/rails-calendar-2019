@@ -8,7 +8,9 @@ form {
   }
 
   input[type="text"] {
+    height: 4rem;
     width: 100%;
+    font-size: 1.8rem;
     display: block;
     border: none;
     background: $light-gray;
@@ -28,6 +30,7 @@ form {
   }
 
   ::placeholder {
+    font-size: 1.8rem;
     color: white;
     font-family: $body-font;
     padding-left: 10px;
@@ -38,8 +41,8 @@ form {
 //radio buttons
 
 input[type="radio"]{
-  border: 2px solid $aqua;
-  font-size: 2rem;
+  // border: 2px solid $aqua;
+  font-size: 3rem;
 }
 
 label.collection_radio_buttons {
@@ -53,16 +56,42 @@ form.simple_form span {
 
 // form for shipping only
 
-.order_zipcode,
-.order_city {
-  width: 48%;
-  display: inline-block !important;
-}
-.order_city {
-  float: right
-}
 
-form.edit_order button {
-  margin-top: 30px;
-  width: 65%;
-}
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+  form {
+
+    input {
+      height: 3rem;
+    }
+
+    input[type="text"] {
+      height: 4.4rem;
+    }
+
+  }
+
+  .order_zipcode,
+  .order_city {
+    width: 48%;
+    display: inline-block !important;
+  }
+  .order_city {
+    float: right
+  }
+
+  form.edit_order button {
+    margin-top: 30px;
+    width: 65%;
+  }
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
+

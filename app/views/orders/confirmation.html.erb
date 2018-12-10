@@ -34,23 +34,25 @@
     </div>
 
     <!-- stripe form for payment -->
-    <%= form_tag order_payments_path(@order) do %>
+    <div class="content-details">
+      <%= form_tag order_payments_path(@order) do %>
 
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-name="calendar"
-        data-email="<%= @order.user_email %>"
-        data-description="<%= @order.product_name%>"
-        data-amount="<%= @order.amount_cents + @order.shipping.price_cents %>"
-        data-label="payer la commande"
-        data-currency="<%= @order.amount.currency %>">
-      </script>
-    <% end %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="calendar"
+          data-email="<%= @order.user_email %>"
+          data-description="<%= @order.product_name%>"
+          data-amount="<%= @order.amount_cents + @order.shipping.price_cents %>"
+          data-label="payer la commande"
+          data-currency="<%= @order.amount.currency %>">
+        </script>
+      <% end %>
+    </div>
 
   </div> <!-- end of content-text -->
 
   <div class="content-image">
-    <%= image_tag 'plr_portrait-image.png' %>
+    <%= image_tag 'deuxmilledixneuf-portrait-1.jpg' %>
   </div> <!-- end of content-image -->
 
 </div> <!-- end of details-content -->

@@ -21,27 +21,27 @@ price_cents: 5000,
 
 standard = Shipping.create(
   name: "standard - canada",
-  description: "shipping standard au canada",
+  description: "shipping standard au canada (+15 $)",
   price_cents: 1500
 )
 
 priority = Shipping.create(
   name: "prioritaire - canada",
-  description: "shipping prioritaire au canada",
+  description: "shipping prioritaire au canada (+25 $) ",
   price_cents: 2500
 )
 
 
 international = Shipping.create(
   name: "standard - international",
-  description: "shipping international",
+  description: "shipping international (+45 $)",
   price_cents: 4500
 )
 
 
 pickup = Shipping.create(
   name: "pickup",
-  description: "ramassage en boutique",
+  description: "ramassage en boutique (gratuit)",
   price: 0.0
 )
 

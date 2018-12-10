@@ -3,26 +3,25 @@
 
 .details-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   min-height: 100vh;
   padding-left: 4vw;
   padding-right: 4vw;
 }
 
-.content-text {
-  padding-left: 4vw;
-  flex: 0 1 56%;
-  .header h1 {
-  }
+.content-details {
+  margin-bottom: 30px;
 }
+
 
 .content-image {
   align-self: center;
+  flex: 0 0 35%;
   img {
     max-width: 100%;
+    width: 100%;
   }
 }
-
 
 #orders-confirmation {
   ul {
@@ -42,6 +41,19 @@
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {
+  .details-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .content-text {
+    flex: 0 1 56%;
+    padding-left: 4vw;
+  }
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {
