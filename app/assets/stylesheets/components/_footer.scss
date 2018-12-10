@@ -1,7 +1,6 @@
 /* ------ COMPONENTS : FOOTER ------ */
 
 // footer displayed only on homepage
-// footer displayed only on homepage
 #home-footer {
   background: $aqua;
   height: 100vh;
@@ -14,13 +13,14 @@
     font-size: 1.4rem;
   }
 
-  #mentions-legales a{
+  #mentions-legales a {
     color: white;
   }
 }
 
 #main-share-links {
   display: inline-block;
+  margin-bottom: 2rem;
 
   a {
     color: white;
@@ -38,7 +38,8 @@
 }
 
 #mail-link {
-    margin: 10px 10px 30px;
+  margin: 10px 10px 30px;
+  text-align: center;
   a {
     color: white;
     font-weight: $font-weight-bold;
@@ -52,6 +53,20 @@
   }
 
 }
+
+#footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img#paysage-image {
+  width: 50%;
+  margin: auto;
+}
+
+
 #main-footer {
   width: 100vw;
   display: flex;
