@@ -10,11 +10,19 @@
     <div id="content-details">
       <h1>deux mille dix neuf</h1>
       <h3>par cdlt, bisou.</h3>
-      <h4><%= @calendar.name %></h4>
+      <h4>maxi calendrier</h4>
 
       <div class="product-description">
-        <p><%= simple_format @calendar.description %></p>
-        <p><%= humanized_money_with_symbol(@calendar.price) %></p>
+        <p>calendrier géant 2019<br>
+          janvier à décembre, avec un petit coin pour glisser toutes les notes du mois + un aperçu du mois suivant.
+        </p>
+        <p>
+          24’ x 32’ (environ 60 x 80 cm) <br>
+          imprimé sur un papier blanc lisse <br>
+          douze feuilles brochées, le tout perforé pour pouvoir être accroché au mur.
+        </p>
+
+        <p class="price">52.00 $</p>
       </div>
 
       <%= form_tag orders_path do %>
@@ -22,6 +30,14 @@
         <%= text_field_tag :user_email, nil, placeholder: "adresse email" %>
         <button class="button">pré commander</button>
       <% end %>
+
+      <div id="date-limite">
+        <p>date limite de commande : 21 décembre <br>
+           envois des calendriers à partir du 27 décembre. <br>
+           livraison dans le monde entier, yay. <br>
+            option de livraison à choisir à l'étape suivante.
+         </p>
+      </div>
 
     </div> <!-- end of #content-details -->
 

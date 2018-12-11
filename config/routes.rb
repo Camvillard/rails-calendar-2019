@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
   get '/orders/:order_id/confirmation', to: 'orders#confirmation', as: 'confirmation'
   get 'orders/:order_id/thanks', to: 'orders#thanks', as: 'thanks'
+  get '/mentions-legales', to: "pages#mentions_legales", as: 'mentions'
 end
