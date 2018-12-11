@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   end
 
   def styles
+  end
+
+  def mentions_legales
 
   end
 end

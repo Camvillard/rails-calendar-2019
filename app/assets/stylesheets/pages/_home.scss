@@ -32,6 +32,16 @@ img#portrait-image {
     margin-top: 0.2rem;
     margin-bottom: 3rem;
   }
+
+  p.price {
+    font-size: 1.8rem;
+    font-weight: $font-weight-bold;
+  }
+}
+
+#date-limite p{
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 
@@ -138,6 +148,10 @@ img#portrait-image {
 
     form {
       padding-right: 10%;
+    }
+
+    p.price {
+      font-size: 2rem;
     }
 
   }
