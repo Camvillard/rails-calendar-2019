@@ -60,7 +60,8 @@ img#portrait-image {
     color: $aqua;
     font-family: $body-font;
     font-weight: $font-weight-bold;
-    background: none;
+    background: $pale-gray;
+    padding-left: 0px;
   }
 
   input[type="text"]:visited,
@@ -75,7 +76,7 @@ img#portrait-image {
   }
 
   ::placeholder {
-    font-family: $body-font;
+    font-family: $form-fonts;
     font-weight: $font-weight-light;
     color: $aqua;
     font-size: 1.8rem;
