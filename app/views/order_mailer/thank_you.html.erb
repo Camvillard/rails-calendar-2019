@@ -1,3 +1,30 @@
-<h1>merci pour votre commande !</h1>
+<div id="thankyou-order-content">
 
-<p>salut <%= @order.first_name %>, merci pour ta commande.</p>
+  <div id="order-header">
+    <h1>salut <%= @order.first_name %> !</h1>
+
+    <h3><span>merci beaucoup pour ta commande.</span></h3>
+  </div>
+
+  <div id="order-recap">
+
+    <p>voici les informations qui pourront peut-être t'être utiles :
+      <ul>
+        <li>commande #<%= @order.id %> </li>
+        <li>montal total : <%= humanized_money_with_symbol(@order.shipping.price + @order.amount) %> </li>
+        <li>mode de livraison : <%= @order.shipping.description %> </li>
+        <li>date de début d'envoi des calendriers : 27 décembre 2018</li>
+      </ul>
+    </p>
+
+    <p>si d'aventure ces informations ne t'étaient vraiment pas utiles, tu peux sans crainte supprimer ce mail - cela fait du bien à la planète.
+      si pour quelque raison que ce soit, tu ressens le besoin de me contacter, c'est par ici : <a href="mailto:hello@camillevillard.com">hello@camillevillard.com</a></p>
+  </div>
+
+  <div id="download-calender">
+    <p>télécharger le calendrier en pdf</p>
+  </div>
+</div>
+
+
+
