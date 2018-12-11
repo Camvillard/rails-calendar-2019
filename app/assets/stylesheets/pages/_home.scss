@@ -19,8 +19,6 @@ img#portrait-image {
 
   #content-details {
     padding: 2vh 4vw 2vh 4vw;
-    position: sticky;
-    top: 4vh;
   }
 
   #content-details h1 {
@@ -122,16 +120,24 @@ img#portrait-image {
 
   #product-details {
     flex: 0 0 38vw;
-    padding: 0 4vw 0 0;
-    padding-right: 4vw;
+    padding: 0px;
 
     #content-details {
+      padding: 2vh 10px 2vh 10px;
       position: sticky;
       top: 4vh;
     }
 
     #content-details h3 {
       font-size: 2.2rem;
+    }
+
+    .product-description {
+      padding-right: 10%;
+    }
+
+    form {
+      padding-right: 10%;
     }
 
   }
