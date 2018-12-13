@@ -12,7 +12,7 @@
       <ul>
         <li>commande #<%= @order.id %> </li>
         <li>montal total : <%= humanized_money_with_symbol(@order.shipping.price + @order.amount) %> </li>
-        <li>mode de livraison : <%= @order.shipping.description %> </li>
+        <li>mode de livraison : <%= @order.shipping.name %> </li>
         <li>date de début d'envoi des calendriers : 27 décembre 2018</li>
       </ul>
     </p>

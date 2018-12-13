@@ -7,7 +7,7 @@ class OrderMailer < ApplicationMailer
   #
   def thank_you(order)
     @order = order
-    @order.shipping = Shipping.first
+    # @order.shipping = Shipping.first
 
     mail(to: order.user_email, subject: "merci pour votre commande !")
   end
